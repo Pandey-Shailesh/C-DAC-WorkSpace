@@ -1,4 +1,4 @@
-package DayThree_Q4;
+package DayThree_Q04;
 
 import gettingInputs.ConsoleInput;
 

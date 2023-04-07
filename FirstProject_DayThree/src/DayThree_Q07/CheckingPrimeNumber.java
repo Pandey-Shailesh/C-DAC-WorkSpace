@@ -1,4 +1,4 @@
-package DayThree_Q7;
+package DayThree_Q07;
 
 public class CheckingPrimeNumber {
 

@@ -1,4 +1,4 @@
-package DayThree_Q1;
+package DayThree_Q01;
 
 public class FunctionalityOfCircle {
 

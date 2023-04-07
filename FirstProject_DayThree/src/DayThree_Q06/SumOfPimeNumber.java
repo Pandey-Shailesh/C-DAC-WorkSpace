@@ -1,4 +1,4 @@
-package DayThree_Q6;
+package DayThree_Q06;
 
 public class SumOfPimeNumber {
 

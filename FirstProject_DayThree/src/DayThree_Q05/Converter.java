@@ -1,4 +1,4 @@
-package DayThree_Q5;
+package DayThree_Q05;
 
 import gettingInputs.ConsoleInput;
 
@@ -11,8 +11,5 @@ public class Converter {
 		int hr = n/(60*60);
 		
 		System.out.println(hr+":"+min+":"+sec);
-		
-		
 	}
-
 }

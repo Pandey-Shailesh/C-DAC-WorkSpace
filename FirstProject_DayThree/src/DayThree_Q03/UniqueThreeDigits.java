@@ -1,4 +1,4 @@
-package DayThree_Q3;
+package DayThree_Q03;
 
 public class UniqueThreeDigits {
 	public static void main(String[] args) {
