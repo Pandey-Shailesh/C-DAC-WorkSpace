@@ -1,4 +1,3 @@
-import gettingInputs.ConsoleInput;
 
 public class Program {
 public static void main(String[] args) {
@@ -15,6 +14,10 @@ public static void main(String[] args) {
 	Date objDate = new Date();
 	objDate.setDate(temDay, temMonth, temYear);
 	System.out.println(objDate.getDay()+"/"+objDate.getMonth()+"/"+objDate.getYear());
+	
+	System.out.println("Enter the day you want to add: ");
+	int num =  ConsoleInput.getInteger(); 
+	objDate.addDay(num);
 	
 }
 }
