@@ -1,4 +1,4 @@
-
+package org.cdac.delhi;
 
 public class ConsoleInput {
 	public static String getString() {
@@ -38,6 +38,16 @@ public class ConsoleInput {
 	public static short getShort() {
 		String objString =getString();
 		short value =  Short.parseShort(objString);
+		return value;
+	}
+	public static boolean getBoolean() {
+		String objString =getString();
+		boolean value =  Boolean.parseBoolean(objString);
+		return value;
+	}
+	public static char getCharacter() {
+		String objString =getString();
+		char value =  objString.charAt(0);
 		return value;
 	}
 }

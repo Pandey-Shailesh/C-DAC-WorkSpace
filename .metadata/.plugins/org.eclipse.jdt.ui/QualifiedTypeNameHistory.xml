@@ -5,4 +5,7 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="gettingInputs.ConsoleInput"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
+    <fullyQualifiedTypeName name="org.in.inheritance.Member"/>
+    <fullyQualifiedTypeName name="org.in.cdac.Square"/>
+    <fullyQualifiedTypeName name="in.org.shap.Square"/>
 </qualifiedTypeNameHistroy>
