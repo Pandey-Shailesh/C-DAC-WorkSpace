@@ -8,4 +8,7 @@
     <fullyQualifiedTypeName name="org.in.inheritance.Member"/>
     <fullyQualifiedTypeName name="org.in.cdac.Square"/>
     <fullyQualifiedTypeName name="in.org.shap.Square"/>
+    <fullyQualifiedTypeName name="org.cdac.delhi.ConsoleInput"/>
+    <fullyQualifiedTypeName name="http.in.cdac.MBAStudent"/>
+    <fullyQualifiedTypeName name="in.org.cdac.Date"/>
 </qualifiedTypeNameHistroy>

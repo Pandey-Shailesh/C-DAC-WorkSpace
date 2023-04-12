@@ -1,10 +1,15 @@
-
+package in.org.cdac;
 public class Date {
 	private int day = 1;
 	private int month = 1;
 	private int year = 2023;
 	private int[] noOfDays = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
+	@Override
+	public String toString()
+	{
+		return day +"/" + month + "/" + year;
+	}
 	public void setDate(int day, int month, int year) {
 
 		if (year > 1900 && year < 3000)

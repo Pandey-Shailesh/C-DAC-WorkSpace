@@ -1,3 +1,4 @@
+package in.org.cdac;
 import org.cdac.delhi.ConsoleInput;
 
 public class Program {
