@@ -208,7 +208,7 @@ public class Program {
 					break;
 				}
 			}
-		} while (choiceMenu < 5);
+		} while (choiceMenu <5);
 
 	}
 }
