@@ -8,12 +8,12 @@ public class Program {
 
 		
 		//LinkedList<Integer> secobjList = new LinkedList<>();
-		objList.add("first");
-		objList.add("second");
-		objList.add("third");
-		objList.add("fourth");
-		objList.add("fifth");
-		objList.add("sixth");
+//		objList.add("first");
+//		objList.add("second");
+//		objList.add("third");
+//		objList.add("fourth");
+//		objList.add("fifth");
+//		objList.add("sixth");
 		
 		//objList.delete(0);
 

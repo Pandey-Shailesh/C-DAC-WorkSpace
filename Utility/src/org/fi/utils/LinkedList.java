@@ -50,7 +50,7 @@ public class LinkedList<T> {
 			return null;
 
 		current = start;
-		return (T) current.data;
+		return  current.data;
 	}
 
 	public T getLast() {
@@ -58,7 +58,7 @@ public class LinkedList<T> {
 			return null;
 
 		current = end;
-		return (T) current.data;
+		return  current.data;
 	}
 
 	public T getNext() {
@@ -66,7 +66,7 @@ public class LinkedList<T> {
 			return null;
 
 		current = current.next;
-		return (T) current.data;
+		return  current.data;
 	}
 
 	public T getPrevious() {
@@ -74,7 +74,7 @@ public class LinkedList<T> {
 			return null;
 
 		current = current.previous;
-		return (T) current.data;
+		return  current.data;
 	}
 
 }

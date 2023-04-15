@@ -78,7 +78,7 @@ public class Program {
 						System.out.println("Enter the salary: ");
 						salary = ConsoleInput.getFloat();
 
-						System.out.println("Enter the hra: ");
+						System.out.println("Enter the overTime: ");
 						float overTime = ConsoleInput.getFloat();
 
 						arrEmployee[count] = new Engineer(name, address, age, gender, salary, overTime);
