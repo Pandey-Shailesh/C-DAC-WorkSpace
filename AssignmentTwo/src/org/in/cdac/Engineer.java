@@ -16,4 +16,11 @@ public void setOverTime(float overTime) {
 	this.overTime = overTime;
 }
 
+@Override
+public String toString() {
+	return "Engineer [overTime=" + overTime + ", name=" + name + ", address=" + address + ", age=" + age + ", gender="
+			+ gender + ", salary=" + salary + "]";
+}
+
+
 }

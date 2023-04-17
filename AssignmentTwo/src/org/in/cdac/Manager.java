@@ -15,5 +15,12 @@ public class Manager extends Employee {
 	public void setHra(float hra) {
 		this.hra = hra;
 	}
+
+	@Override
+	public String toString() {
+		return "Manager [hra=" + hra + ", name=" + name + ", address=" + address + ", age=" + age + ", gender=" + gender
+				+ ", salary=" + salary + "]";
+	}
+
 	
 }

@@ -3,12 +3,17 @@ package org.in.cdac;
 import org.cdac.delhi.ConsoleInput;
 import org.fi.utils.LinkedList;
 
+
+
+//static import
+//import static org.fi.utils.ConsoleInput.getInteger;
+//import static org.fi.utils.ConsoleInput.getFloat;
 public class Menu {
 	public static void main(String[] args) {
-
+		
 		LinkedList objList = new LinkedList();
-		//Employee arrEmployee[] = new Employee[100];
-		//Employee objEmployee =new Employee();
+		// Employee arrEmployee[] = new Employee[100];
+		// Employee objEmployee =new Employee();
 		int count = 0;
 		int choiceMenu = 0;
 
@@ -19,6 +24,8 @@ public class Menu {
 			System.out.println("3.Search");
 			System.out.println("4.Save");
 			System.out.println("5.Exit");
+			System.out.println("6.Save");
+			System.out.println("7.Load");
 			System.out.println("======================");
 			System.out.println("Enter the  choice: ");
 
@@ -28,7 +35,7 @@ public class Menu {
 
 			case 1:// Engineering Student
 				System.out.println("=========================");
-				int subMenu =0;
+				int subMenu = 0;
 				do {
 					System.out.println("1.Manager");
 					System.out.println("2.Engineer");
@@ -41,10 +48,8 @@ public class Menu {
 					switch (subMenu) {
 					case 1:
 					case 2:
-					case 3:
-						{
-							Employee objEmploye =null;
-							System.out.println(" you choose  Manager");
+					case 3: {
+						Employee objEmploye = null;
 						System.out.println("Enter the name: ");
 						String name = ConsoleInput.getString();
 
@@ -60,80 +65,24 @@ public class Menu {
 						System.out.println("Enter the salary: ");
 						float salary = ConsoleInput.getFloat();
 
-						if(subMenu==1) {
+						if (subMenu == 1) {
 							System.out.println("Enter the hra: ");
 							float hra = ConsoleInput.getFloat();
-							
-						 objEmploye = new Manager(name, address, age, gender, salary, hra);
-						}
-						else if(subMenu==2)
-						{System.out.println("Enter the overTime: ");
-						float overTime = ConsoleInput.getFloat();
-						 objEmploye =new Engineer(name, address, age, gender, salary, overTime);
-						
-						}
-						else if(subMenu==3)
-						{System.out.println("Enter the commission: ");
-						float commission = ConsoleInput.getFloat();
-						 objEmploye =new SalePerson(name, address, age, gender, salary, commission);
+
+							objEmploye = new Manager(name, address, age, gender, salary, hra);
+						} else if (subMenu == 2) {
+							System.out.println("Enter the overTime: ");
+							float overTime = ConsoleInput.getFloat();
+							objEmploye = new Engineer(name, address, age, gender, salary, overTime);
+
+						} else if (subMenu == 3) {
+							System.out.println("Enter the commission: ");
+							float commission = ConsoleInput.getFloat();
+							objEmploye = new SalePerson(name, address, age, gender, salary, commission);
 						}
 						objList.add(objEmploye);
-//						Employee data= new Employee(name, address, age, gender, salary);
-//						objList.add(new Employee(name, address, age, gender, salary));
-//						}
-						
-						
-						//arrEmployee[count] = new Manager(name, address, age, gender, salary, hra);
-//						count++;
+					}
 						break;
-					
-//					case 2:
-//						System.out.println(" you choose  Engineer");
-//						System.out.println("Enter the name: ");
-//						name = ConsoleInput.getString();
-//
-//						System.out.println("Enter the age: ");
-//						age = ConsoleInput.getInteger();
-//
-//						System.out.println("Enter the adress: ");
-//						address = ConsoleInput.getString();
-//
-//						System.out.println("Enter the gender: ");
-//						gender = ConsoleInput.getBoolean();
-//
-//						System.out.println("Enter the salary: ");
-//						salary = ConsoleInput.getFloat();
-//
-//						System.out.println("Enter the hra: ");
-//						float overTime = ConsoleInput.getFloat();
-//
-//						arrEmployee[count] = new Engineer(name, address, age, gender, salary, overTime);
-//						count++;
-//						break;
-//
-//					case 3:
-//						System.out.println(" you choose  SalePerson");
-//						System.out.println("Enter the name: ");
-//						name = ConsoleInput.getString();
-//
-//						System.out.println("Enter the age: ");
-//						age = ConsoleInput.getInteger();
-//
-//						System.out.println("Enter the adress: ");
-//						address = ConsoleInput.getString();
-//
-//						System.out.println("Enter the gender: ");
-//						gender = ConsoleInput.getBoolean();
-//
-//						System.out.println("Enter the salary: ");
-//						salary = ConsoleInput.getFloat();
-//
-//						System.out.println("Enter the commission: ");
-//						float commission = ConsoleInput.getFloat();
-//
-//						arrEmployee[count] = new SalePerson(name, address, age, gender, salary, commission);
-//						count++;
-//						break;
 
 					case 4:
 						System.out.println(" Exit");
@@ -146,82 +95,66 @@ public class Menu {
 
 			case 2:// Display
 				System.out.println("=========================");
-				System.out.println("a.Display Medical ");
-				System.out.println("b.Display Sale Person");
-				System.out.println("c.Display Engneer");
+				System.out.println("a.Display Manager ");
+				System.out.println("b.Display Engineer ");
+				System.out.println("c.Display Sale Person");
+				System.out.println("d. exit");
 				System.out.println("======================");
 				System.out.println("Enter the  choice: ");
-				int choiceDisplay = ConsoleInput.getInteger();
+				char choiceDisplay = ConsoleInput.getCharacter();
 				switch (choiceDisplay) {
-				case 'a':
-					for (int iTemp = 0; iTemp <= count; iTemp++) {
-						if (arrEmployee[iTemp] instanceof Manager) {
-							Manager manager = (Manager) arrEmployee[iTemp];
-							System.out.println(manager.getName());
-							System.out.println(manager.getAge());
-							System.out.println(manager.getAddress());
-							System.out.println(manager.getSalary());
-							System.out.println(manager.isGender());
-							System.out.println(manager.getHra());
-						}
-					}
-					break;
 
+				case 'a':
 				case 'b':
-					for (int iTemp = 0; iTemp <= count; iTemp++) {
-						if (arrEmployee[iTemp] instanceof SalePerson) {
-							SalePerson salePerson = (SalePerson) arrEmployee[iTemp];
-							System.out.println(salePerson.getName());
-							System.out.println(salePerson.isGender());
-							System.out.println(salePerson.getAddress());
-							System.out.println(salePerson.getAge());
-							System.out.println(salePerson.getSalary());
-							System.out.println(salePerson.getCommission());
+				case 'c': {
+					Employee data = (Employee) objList.getFirst();
+
+					while (data != null) {
+						if (choiceDisplay == 'a' && (Manager) data instanceof Manager) {
+							System.out.println(data);
+							data = (Employee) objList.getNext();
+						} else if (choiceDisplay == 'b' && (Engineer) data instanceof Engineer) {
+							System.out.println(data);
+							data = (Employee) objList.getNext();
+						} else if (choiceDisplay == 'c' && (SalePerson) data instanceof SalePerson) {
+							System.out.println(data);
+							data = (Employee) objList.getNext();
 						}
 					}
+				}
 					break;
-				case 'c':
-					for (int iTemp = 0; iTemp <= count; iTemp++) {
-						if (arrEmployee[iTemp] instanceof Engineer) {
-							Engineer engineer = (Engineer) arrEmployee[iTemp];
-							System.out.println(engineer.getName());
-							System.out.println(engineer.isGender());
-							System.out.println(engineer.getAddress());
-							System.out.println(engineer.getSalary());
-							System.out.println(engineer.getAge());
-							System.out.println(engineer.getOverTime());
-						}
-					}
+				case 'd':
+					System.out.println("exit");
 					break;
 
 				case 3:// Search
-					System.out.println("This is Search menu");
-					System.out.println("Enter the name you want to search:");
-					String value = ConsoleInput.getString();
-					
-					for (int iTemp = 0; iTemp <= count; iTemp++) {
-						if (arrEmployee[iTemp] instanceof Engineer) {
-							Engineer engineer = (Engineer) arrEmployee[iTemp];
-							if(value.equals(engineer.name)) {
-							System.out.println(engineer.getName());
-							System.out.println("Engg.");
-							}
-						}
-						else if (arrEmployee[iTemp] instanceof SalePerson) {
-							SalePerson salePerson = (SalePerson) arrEmployee[iTemp];
-							if(value.equals(salePerson.name)) {
-							System.out.println(salePerson.getName());
-							System.out.println("sale Person");
-							}
-						}
-						else if (arrEmployee[iTemp] instanceof Manager) {
-							Manager manager = (Manager) arrEmployee[iTemp];
-							if(value.equals(manager.name)) {
-								System.out.println(manager.getName());
-								System.out.println("manager");
-								}
-						}
-					}
+//					System.out.println("This is Search menu");
+//					System.out.println("Enter the name you want to search:");
+//					String value = ConsoleInput.getString();
+//					
+//					for (int iTemp = 0; iTemp <= count; iTemp++) {
+//						if (arrEmployee[iTemp] instanceof Engineer) {
+//							Engineer engineer = (Engineer) arrEmployee[iTemp];
+//							if(value.equals(engineer.name)) {
+//							System.out.println(engineer.getName());
+//							System.out.println("Engg.");
+//							}
+//						}
+//						else if (arrEmployee[iTemp] instanceof SalePerson) {
+//							SalePerson salePerson = (SalePerson) arrEmployee[iTemp];
+//							if(value.equals(salePerson.name)) {
+//							System.out.println(salePerson.getName());
+//							System.out.println("sale Person");
+//							}
+//						}
+//						else if (arrEmployee[iTemp] instanceof Manager) {
+//							Manager manager = (Manager) arrEmployee[iTemp];
+//							if(value.equals(manager.name)) {
+//								System.out.println(manager.getName());
+//								System.out.println("manager");
+//								}
+//						}
+//					}
 					break;
 
 				case 4:// save
@@ -234,7 +167,7 @@ public class Menu {
 					break;
 				}
 			}
-		} while (choiceMenu <5);
+		} while (choiceMenu < 7);
 
 	}
 }

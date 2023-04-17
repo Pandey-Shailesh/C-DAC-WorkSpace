@@ -16,5 +16,11 @@ public class SalePerson extends Employee {
 	public void setCommission(float commission) {
 		this.commission = commission;
 	}
+
+	@Override
+	public String toString() {
+		return "SalePerson [commission=" + commission + ", name=" + name + ", address=" + address + ", age=" + age
+				+ ", gender=" + gender + ", salary=" + salary + "]";
+	}
 	
 }

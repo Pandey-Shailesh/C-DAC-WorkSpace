@@ -35,7 +35,6 @@ public abstract class Employee {
 		if (age>18 && age<60) {
 			this.age = age;
 		}
-		
 	}
 	public boolean isGender() {
 		return gender;
@@ -48,6 +47,11 @@ public abstract class Employee {
 	}
 	public void setSalary(Float salary) {
 		this.salary = salary;
+	}
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", address=" + address + ", age=" + age + ", gender=" + gender + ", salary="
+				+ salary + "]";
 	}
 
 	
