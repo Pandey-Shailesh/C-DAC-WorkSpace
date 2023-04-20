@@ -23,9 +23,8 @@ public class Menu {
 			System.out.println("2.Display");
 			System.out.println("3.Search");
 			System.out.println("4.Save");
-			System.out.println("5.Exit");
-			System.out.println("6.Save");
-			System.out.println("7.Load");
+			System.out.println("5.Load");
+			System.out.println("6.Exit");
 			System.out.println("======================");
 			System.out.println("Enter the  choice: ");
 
@@ -128,33 +127,33 @@ public class Menu {
 					break;
 
 				case 3:// Search
-//					System.out.println("This is Search menu");
-//					System.out.println("Enter the name you want to search:");
-//					String value = ConsoleInput.getString();
-//					
-//					for (int iTemp = 0; iTemp <= count; iTemp++) {
-//						if (arrEmployee[iTemp] instanceof Engineer) {
-//							Engineer engineer = (Engineer) arrEmployee[iTemp];
-//							if(value.equals(engineer.name)) {
-//							System.out.println(engineer.getName());
-//							System.out.println("Engg.");
-//							}
-//						}
-//						else if (arrEmployee[iTemp] instanceof SalePerson) {
-//							SalePerson salePerson = (SalePerson) arrEmployee[iTemp];
-//							if(value.equals(salePerson.name)) {
-//							System.out.println(salePerson.getName());
-//							System.out.println("sale Person");
-//							}
-//						}
-//						else if (arrEmployee[iTemp] instanceof Manager) {
-//							Manager manager = (Manager) arrEmployee[iTemp];
-//							if(value.equals(manager.name)) {
-//								System.out.println(manager.getName());
-//								System.out.println("manager");
-//								}
-//						}
-//					}
+					System.out.println("This is Search menu");
+					System.out.println("Enter the name you want to search:");
+					String value = ConsoleInput.getString();
+					
+					for (int iTemp = 0; iTemp <= count; iTemp++) {
+						if (arrEmployee[iTemp] instanceof Engineer) {
+							Engineer engineer = (Engineer) arrEmployee[iTemp];
+							if(value.equals(engineer.name)) {
+							System.out.println(engineer.getName());
+							System.out.println("Engg.");
+							}
+						}
+						else if (arrEmployee[iTemp] instanceof SalePerson) {
+							SalePerson salePerson = (SalePerson) arrEmployee[iTemp];
+							if(value.equals(salePerson.name)) {
+							System.out.println(salePerson.getName());
+							System.out.println("sale Person");
+							}
+						}
+						else if (arrEmployee[iTemp] instanceof Manager) {
+							Manager manager = (Manager) arrEmployee[iTemp];
+							if(value.equals(manager.name)) {
+								System.out.println(manager.getName());
+								System.out.println("manager");
+								}
+						}
+					}
 					break;
 
 				case 4:// save

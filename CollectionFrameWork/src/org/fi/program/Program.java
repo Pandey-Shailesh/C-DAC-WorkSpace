@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Properties;
 import java.util.Scanner;
@@ -21,32 +22,40 @@ public class Program {
 //		treeSetPrint();
 //		hashMap();
 
-		Properties props = new Properties();
-		
-		try {
-			props.load(new FileInputStream("Setting.propertise"));
-			
-			String username = props.getProperty("database.username");
-			String password = props.getProperty("database.password");
-			String temp = props.getProperty("size");
-			
-			
-			System.out.println(username);
-			System.out.println(password);
-			System.out.println(temp);
-
-			
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
+//		Properties props = new Properties();
+//		
+//		try {
+//			props.load(new FileInputStream("Setting.propertise"));
+//			
+//			String username = props.getProperty("database.username");
+//			String password = props.getProperty("database.password");
+//			String temp = props.getProperty("size");
+//			
+//			
+//			System.out.println(username);
+//			System.out.println(password);
+//			System.out.println(temp);
+//
+//			
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 		
+		LinkedList<Integer> list = new LinkedList<>();
+		
+	
+		
+		
+		
+		
+		
+		
+	
 	}
 
 	public static void hashMap() {
