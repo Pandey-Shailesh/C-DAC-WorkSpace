@@ -11,7 +11,7 @@ public static void main(String[] args) {
 	try(Scanner scanner = new Scanner(System.in)) {
 		System.out.println("Enter the name of the class to load ");
 		String className = scanner.next();
-		Class<?> refClass = Class.forName(className);
+		Class refClass = Class.forName(className);
 		
 //		Class x = Program.class;
 //		Program objProgram;
