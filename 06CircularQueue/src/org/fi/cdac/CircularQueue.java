@@ -1,12 +1,12 @@
 package org.fi.cdac;
 
-public class CircularQUeue {
+public class CircularQueue {
 	int[] arr;
 	int front;
 	int rear;
 	int size;
 
-	public CircularQUeue(int size) {
+	public CircularQueue(int size) {
 		arr = new int[size];
 		front = rear = -1;
 		this.size = size;
@@ -42,7 +42,7 @@ public class CircularQUeue {
 		} else if (isEmpty()) {
 			rear = 0;
 			front++;
-			arr[front] = value;
+			arr[front] = value;   
 			System.out.println(value + " is inserted successfully");
 		} else {
 			if (front + 1 == size) {
@@ -53,7 +53,7 @@ public class CircularQUeue {
 			arr[front]= value;
 			System.out.println(value+" is inserted Successfully");
 		}
-		size++;
+		
 	}
 
 	//get the value of top of the queue 
@@ -67,20 +67,38 @@ public class CircularQUeue {
 		}
 	}
 	
-	//display all the elements 
+	//display all the elements                            
 	public void dispalyElements() {
 		try {
 			for (int iTemp = 0; iTemp < size; iTemp++) {
 				System.out.print(arr[iTemp]+" ");
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Queue is empty");
 		}
 	}
 	
 	
-	public void deQueue() {
-		
+	//display the elements
+	public int deQueue() {
+		if (isEmpty()) {
+			System.out.println("The Queue is empty");
+			return -1;
+		}
+		else {
+			int result = arr[rear];
+			arr[rear]=Integer.MIN_VALUE;
+			if (front== rear) {
+				front = rear =-1;
+			}
+			else if(rear+1==size) {
+				rear=0;
+			}
+			else {
+				rear++;
+			}
+			return result;
+		}
 	}
 	
 	
