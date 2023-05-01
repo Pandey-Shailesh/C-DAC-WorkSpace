@@ -40,19 +40,20 @@ public class Program {
 		
 	}
 
-	public static void stsrtWithp() {
-		Scanner scanner = new Scanner(System.in);
-		String name =null;
-		Predicate<String> startwithP = str ->{
-			if (str.startsWith("P"))
-				return true;
-			else
-				return false;
-		};
-		
-		System.out.println("Enter the name :");
-		name = scanner.next();
-		 System.out.println(startwithP.test(name));
+	public static void startWithp() {
+		try (Scanner scanner = new Scanner(System.in)) {
+			String name =null;
+			Predicate<String> startwithP = str ->{
+				if (str.startsWith("P"))
+					return true;
+				else
+					return false;
+			};
+			
+			System.out.println("Enter the name :");
+			name = scanner.next();
+			System.out.println(startwithP.test(name));
+		}
 	}
 
 	public static void statuscheking() {
