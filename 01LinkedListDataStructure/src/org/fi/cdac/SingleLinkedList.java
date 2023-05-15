@@ -33,11 +33,6 @@ public class SingleLinkedList {
 			head = newNode;
 		}
 
-		else if (location >= size) {
-			newNode.next = null;
-			tail.next = newNode;
-			tail = newNode;
-		}
 
 		else {
 			Node tempNode = head;
